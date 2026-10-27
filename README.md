@@ -1,7 +1,9 @@
 # STARTUP-BUSINESS-PLANNING-GUIDANCE-PLATFORM
 
 Team ASARA
-Index No.   Name
+
+
+
 
 244021L   Ariyawansa KTHA
 
