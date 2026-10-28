@@ -19,4 +19,4 @@ Design and planning. Frontend and backend implementation have not yet started.
 - Exportable legal action plan
 
 ## Design Reference
-Figma link: Add your shareable Figma link here.
+Figma link: [Add your shareable Figma link here.](https://www.figma.com/design/8FuuPG8PWwbpO7cVupZKKP/ASARA-Template?node-id=3-2&m=dev&t=gHesmkfCjSvTKXnG-1)
