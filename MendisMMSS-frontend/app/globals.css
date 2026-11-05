@@ -24,3 +24,23 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@theme {
+  --animate-blob-1: blob-1 18s ease-in-out infinite;
+  --animate-blob-2: blob-2 22s ease-in-out infinite;
+  --animate-blob-3: blob-3 20s ease-in-out infinite;
+
+  @keyframes blob-1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(150px, 100px) scale(1.15); }
+    66% { transform: translate(-100px, 50px) scale(0.9); }
+  }
+  @keyframes blob-2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-200px, -120px) scale(1.2); }
+  }
+  @keyframes blob-3 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(180px, -80px) scale(1.1); }
+  }
+}
