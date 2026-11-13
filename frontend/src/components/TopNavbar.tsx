@@ -14,7 +14,7 @@ type TopNavbarProps = {
 };
 
 export default function TopNavbar({
-  title = "Financial Modelling",
+  title = "Money - Your Wallet",
   userInitial = "U",
   hasUnreadNotifications = false,
   searchPlaceholder = "Search",
