@@ -117,17 +117,17 @@ export default function ServiceProviderDirectory({
         </div>
       </div>
 
-      {/* Providers List - scrolls separately with hidden scrollbar */}
-      <div className="divide-y divide-[#eef4f0] max-h-[220px] xl:max-h-[250px] 2xl:max-h-[280px] overflow-y-auto overscroll-contain no-scrollbar [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+      {/* Providers List - scrolls separately with hidden scrollbar, exactly 3 cards visible */}
+      <div className="divide-y divide-[#eef4f0] h-[234px] overflow-y-auto overscroll-contain no-scrollbar [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
         {filteredProviders.length === 0 ? (
-          <div className="p-6 text-center text-[13px] text-gray-400">
+          <div className="h-[234px] flex items-center justify-center p-6 text-center text-[13px] text-gray-400">
             No service providers match the current filters.
           </div>
         ) : (
           filteredProviders.map((provider) => (
             <div
               key={provider.id}
-              className="p-3.5 flex items-center justify-between gap-3 hover:bg-[#fafcfb] transition-colors"
+              className="px-3.5 h-[78px] shrink-0 flex items-center justify-between gap-3 hover:bg-[#fafcfb] transition-colors"
             >
               <div className="flex items-center gap-3 min-w-0">
                 {/* Logo circle */}
@@ -140,17 +140,17 @@ export default function ServiceProviderDirectory({
 
                 {/* Info */}
                 <div className="min-w-0">
-                  <h4 className="text-[13px] font-bold text-[#193b30] truncate">
+                  <h4 className="text-[13px] font-bold text-[#193b30] truncate leading-tight">
                     {provider.name}
                   </h4>
-                  <p className="text-[11px] text-[#64746d] truncate">
+                  <p className="text-[11px] text-[#64746d] truncate leading-tight mt-0.5">
                     {provider.tagline}
                   </p>
                   <div className="flex items-center gap-1 mt-1 flex-wrap">
                     {provider.categories.slice(0, 3).map((cat) => (
                       <span
                         key={cat}
-                        className="bg-[#f2f2f7] text-[#64746d] text-[9px] px-1.5 py-0.5 rounded"
+                        className="bg-[#f2f2f7] text-[#64746d] text-[9px] px-1.5 py-0.5 rounded leading-none"
                       >
                         {cat}
                       </span>
