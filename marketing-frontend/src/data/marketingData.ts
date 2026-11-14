@@ -173,6 +173,90 @@ export const SERVICE_PROVIDERS: ServiceProvider[] = [
       location: "Colombo 07, Sri Lanka",
     },
   },
+  {
+    id: "apex-digital",
+    name: "Apex Digital Marketing",
+    tagline: "Performance marketing and SEO",
+    initials: "AD",
+    logoBg: "#8e8e93",
+    categories: ["Web development", "Content", "Service"],
+    businessTypes: ["Products", "Services"],
+    about:
+      "Apex Digital Marketing is a data-driven growth agency helping startups optimize search rankings, customer conversion funnels, and paid advertising ROI.",
+    services: [
+      {
+        title: "Search engine optimisation",
+        description: "Technical SEO audits, keyword ranking strategies, and local business listing optimizations.",
+      },
+      {
+        title: "Paid search campaigns",
+        description: "Google Ads, retargeting display networks, and high-intent customer acquisition.",
+      },
+    ],
+    contacts: {
+      email: "hello@apexdigital.lk",
+      phone: "+94 11 345 6789",
+      whatsapp: "+94 77 345 6789",
+      facebook: "facebook.com/apexdigitallk",
+      location: "Colombo 04, Sri Lanka",
+    },
+  },
+  {
+    id: "pulse-pr",
+    name: "Pulse PR & Communications",
+    tagline: "Public relations and media reach",
+    initials: "PR",
+    logoBg: "#8e8e93",
+    categories: ["Content", "Service"],
+    businessTypes: ["Products", "Services"],
+    about:
+      "Pulse PR connects emerging startups with mainstream tech publications, industry podcasts, and premier influencer partners across South Asia.",
+    services: [
+      {
+        title: "Press & Media Releases",
+        description: "Media outreach, launch announcements, and executive thought leadership articles.",
+      },
+      {
+        title: "Influencer Partnerships",
+        description: "Vetted creator collaborations, product reviews, and brand ambassadorships.",
+      },
+    ],
+    contacts: {
+      email: "press@pulsecomms.lk",
+      phone: "+94 11 567 8901",
+      whatsapp: "+94 71 567 8901",
+      facebook: "facebook.com/pulseprlk",
+      location: "Colombo 02, Sri Lanka",
+    },
+  },
+  {
+    id: "spark-studios",
+    name: "Spark Studios LK",
+    tagline: "Product photography and creative design",
+    initials: "SS",
+    logoBg: "#8e8e93",
+    categories: ["Graphic design", "Content", "Products"],
+    businessTypes: ["Products", "Services"],
+    about:
+      "Spark Studios crafts high-impact product photography, 3D renderings, and packaging visuals tailored for e-commerce stores and retail displays.",
+    services: [
+      {
+        title: "E-Commerce Photography",
+        description: "High-resolution studio photography on clean backgrounds and lifestyle settings.",
+      },
+      {
+        title: "Packaging & Print Design",
+        description: "Retail box packaging, labels, unboxing inserts, and point-of-sale collateral.",
+      },
+    ],
+    contacts: {
+      email: "studio@sparkstudios.lk",
+      phone: "+94 11 678 9012",
+      whatsapp: "+94 76 678 9012",
+      facebook: "facebook.com/sparkstudioslk",
+      location: "Rajagiriya, Sri Lanka",
+    },
+  },
 ];
 
 export const PROBLEM_OPTIONS = [

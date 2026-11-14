@@ -205,21 +205,25 @@ export default function MarketingPage() {
             </div>
           </main>
 
-          {/* Right Column (Status & Directory): Fixed, never scrolls with the form, scrollbar hidden */}
-          <aside className="w-[440px] 2xl:w-[480px] shrink-0 p-8 space-y-6 overflow-y-auto no-scrollbar [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden bg-[#F4F4F2]">
+          {/* Right Column (Status & Directory): Fixed, never scrolls with the form */}
+          <aside className="w-[440px] 2xl:w-[480px] shrink-0 p-6 xl:p-8 space-y-4 xl:space-y-6 overflow-hidden bg-[#F4F4F2] flex flex-col justify-start">
             {/* Plan Status Card */}
-            <PlanStatusCard
-              status={status}
-              completedSections={completedSectionsCount}
-              totalSections={4}
-              onEdit={handleEdit}
-              onDelete={() => setIsDeleteModalOpen(true)}
-            />
+            <div className="shrink-0">
+              <PlanStatusCard
+                status={status}
+                completedSections={completedSectionsCount}
+                totalSections={4}
+                onEdit={handleEdit}
+                onDelete={() => setIsDeleteModalOpen(true)}
+              />
+            </div>
 
             {/* Service Provider Directory */}
-            <ServiceProviderDirectory
-              onSelectProvider={(p) => setActiveProvider(p)}
-            />
+            <div className="shrink-0">
+              <ServiceProviderDirectory
+                onSelectProvider={(p) => setActiveProvider(p)}
+              />
+            </div>
           </aside>
         </div>
       </div>

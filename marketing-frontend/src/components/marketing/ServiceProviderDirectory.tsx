@@ -42,7 +42,7 @@ export default function ServiceProviderDirectory({
   return (
     <div className="bg-white border border-[#dce5df] rounded-[10px] overflow-hidden shadow-sm flex flex-col">
       {/* Directory Header */}
-      <div className="p-4 border-b border-[#e9f0eb] flex items-center gap-3">
+      <div className="p-4 border-b border-[#e9f0eb] flex items-center gap-3 shrink-0">
         <div className="w-8 h-8 rounded-lg bg-[#e8f1eb] text-[#2F6B4F] flex items-center justify-center shrink-0">
           <LayoutGrid size={18} />
         </div>
@@ -52,7 +52,7 @@ export default function ServiceProviderDirectory({
       </div>
 
       {/* Search Bar */}
-      <div className="p-3 border-b border-[#e9f0eb]">
+      <div className="p-3 border-b border-[#e9f0eb] shrink-0">
         <div className="relative">
           <Search
             size={14}
@@ -69,7 +69,7 @@ export default function ServiceProviderDirectory({
       </div>
 
       {/* Filter Row */}
-      <div className="px-3 py-2.5 border-b border-[#e9f0eb] grid grid-cols-2 gap-2 bg-[#f9fbf9]">
+      <div className="px-3 py-2.5 border-b border-[#e9f0eb] grid grid-cols-2 gap-2 bg-[#f9fbf9] shrink-0">
         {/* Category */}
         <div>
           <label className="text-[10px] font-bold uppercase text-[#64746d] block mb-1">
@@ -117,8 +117,8 @@ export default function ServiceProviderDirectory({
         </div>
       </div>
 
-      {/* Providers List */}
-      <div className="divide-y divide-[#eef4f0] max-h-[380px] overflow-y-auto">
+      {/* Providers List - scrolls separately */}
+      <div className="divide-y divide-[#eef4f0] max-h-[220px] xl:max-h-[250px] 2xl:max-h-[280px] overflow-y-auto overscroll-contain custom-scrollbar">
         {filteredProviders.length === 0 ? (
           <div className="p-6 text-center text-[13px] text-gray-400">
             No service providers match the current filters.
@@ -173,7 +173,7 @@ export default function ServiceProviderDirectory({
       </div>
 
       {/* Footer note */}
-      <div className="p-3 bg-[#fbfdfc] border-t border-[#eef4f0]">
+      <div className="p-3 bg-[#fbfdfc] border-t border-[#eef4f0] shrink-0">
         <p className="text-[11px] text-[#64746d] leading-tight">
           Filters use your business type and selected service category to narrow suggestions.
         </p>
