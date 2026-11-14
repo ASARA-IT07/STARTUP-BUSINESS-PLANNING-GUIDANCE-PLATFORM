@@ -1,10 +1,10 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { User } from "lucide-react";
 
 type TopNavbarProps = {
   title?: string;
-  userInitial?: string;
   hasUnreadNotifications?: boolean;
   searchPlaceholder?: string;
   onSearch?: (query: string) => void;
@@ -15,7 +15,6 @@ type TopNavbarProps = {
 
 export default function TopNavbar({
   title = "Money - Your Wallet",
-  userInitial = "U",
   hasUnreadNotifications = false,
   searchPlaceholder = "Search",
   onSearch,
@@ -74,7 +73,7 @@ export default function TopNavbar({
           aria-label="Open user profile"
           className="flex h-10 w-10 items-center justify-center rounded-full border-[1.5px] border-[#5b8461] bg-[#8aa893] text-[15px] font-bold text-[#1f4d3f] shadow-[0_3px_5px_rgba(47,93,80,0.3)] transition hover:bg-[#7c9b86] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3f6b4a] focus-visible:ring-offset-2"
         >
-          {userInitial}
+          <User size={20} />
         </button>
 
         <button
