@@ -117,8 +117,8 @@ export default function ServiceProviderDirectory({
         </div>
       </div>
 
-      {/* Providers List - scrolls separately */}
-      <div className="divide-y divide-[#eef4f0] max-h-[220px] xl:max-h-[250px] 2xl:max-h-[280px] overflow-y-auto overscroll-contain custom-scrollbar">
+      {/* Providers List - scrolls separately with hidden scrollbar */}
+      <div className="divide-y divide-[#eef4f0] max-h-[220px] xl:max-h-[250px] 2xl:max-h-[280px] overflow-y-auto overscroll-contain no-scrollbar [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
         {filteredProviders.length === 0 ? (
           <div className="p-6 text-center text-[13px] text-gray-400">
             No service providers match the current filters.
