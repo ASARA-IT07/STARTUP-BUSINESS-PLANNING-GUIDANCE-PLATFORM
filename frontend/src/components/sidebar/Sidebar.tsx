@@ -16,7 +16,7 @@ export default function Sidebar() {
       {/* Logo */}
       <div className="pt-8 pb-8">
         <h1 className="text-center text-[30px] font-bold text-[#2F6B4F]">
-          Namee
+          Nova
         </h1>
       </div>
 
