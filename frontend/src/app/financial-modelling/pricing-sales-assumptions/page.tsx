@@ -11,7 +11,7 @@ export default function PricingSalesAssumptionsPage() {
 
 <main className="flex-1 bg-[#EDF2EA] p-8">
   <h1 className="text-4xl font-bold text-[#2E6B57]">
-    Pricing & Sales Assumptions
+    Pricing & Sales Projections
   </h1>
 
   <p className="mt-3 text-gray-600">
@@ -173,7 +173,7 @@ export default function PricingSalesAssumptionsPage() {
           </button>
 
           <button className="rounded-lg bg-[#2E6B57] px-5 py-2 text-white">
-            Save assumptions
+            Save projections
           </button>
         </div>
       </div>
