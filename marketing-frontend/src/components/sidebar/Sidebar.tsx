@@ -65,72 +65,68 @@ export default function Sidebar({ activeItem }: SidebarProps) {
   ];
 
   return (
-    <aside className="w-[260px] h-screen sticky top-0 bg-[#F4F4F2] border-r border-gray-200 flex flex-col shadow-sm shrink-0 overflow-hidden z-20">
-      {/* Logo */}
-      <div className="pt-8 pb-8">
-        <Link href="/">
-          <h1 className="text-center text-[30px] font-bold text-[#2F6B4F]">
-            Nova
-          </h1>
-        </Link>
-      </div>
+    <aside className="w-[260px] h-screen sticky top-0 bg-[#F4F4F2] border-r border-gray-200 flex flex-col justify-between shadow-sm shrink-0 overflow-hidden z-20 select-none">
+      {/* Top Section */}
+      <div className="flex flex-col">
+        {/* Logo */}
+        <div className="pt-6 pb-4">
+          <Link href="/">
+            <h1 className="text-center text-[28px] font-bold text-[#2F6B4F] tracking-tight">
+              Nova
+            </h1>
+          </Link>
+        </div>
 
-      {/* Current Business */}
-      <div className="px-6">
-        <p className="text-[11px] uppercase font-semibold tracking-wide text-gray-500 mb-4">
-          Current Business
-        </p>
+        {/* Current Business */}
+        <div className="px-6 mb-4">
+          <p className="text-[11px] uppercase font-semibold tracking-wide text-gray-500 mb-2">
+            Current Business
+          </p>
 
-        <div className="bg-[#739472] rounded-xl px-3 py-1.5 shadow-lg">
-          <div className="flex items-center justify-between">
+          <div className="bg-[#739472] rounded-xl px-3.5 py-2 shadow-md">
             <div>
-              <p className="font-semibold text-white">
+              <p className="font-semibold text-white text-[14px] leading-tight">
                 Willow &amp; Co.
               </p>
-
-              <p className="text-sm text-green-100">
+              <p className="text-[12px] text-green-100 leading-tight mt-0.5">
                 Business profile
               </p>
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="mx-8 my-4 border-t border-gray-200" />
+        {/* Workspace */}
+        <div className="px-6">
+          <h2 className="text-gray-500 font-bold text-sm tracking-wider uppercase mb-2">
+            WORKSPACE
+          </h2>
 
-      {/* Workspace */}
-      <div className="px-8">
-        <h2 className="text-gray-500 font-bold text-xl mb-2">
-          WORKSPACE
-        </h2>
-
-        <div className="space-y-1">
-          {navItems.map((item) => {
-            const isActive = currentActive === item.label;
-            return isActive ? (
-              <ActiveNavItem
-                key={item.label}
-                icon={item.icon}
-                label={item.label}
-                href={item.href}
-              />
-            ) : (
-              <NavItem
-                key={item.label}
-                icon={item.icon}
-                label={item.label}
-                href={item.href}
-              />
-            );
-          })}
+          <div className="space-y-1">
+            {navItems.map((item) => {
+              const isActive = currentActive === item.label;
+              return isActive ? (
+                <ActiveNavItem
+                  key={item.label}
+                  icon={item.icon}
+                  label={item.label}
+                  href={item.href}
+                />
+              ) : (
+                <NavItem
+                  key={item.label}
+                  icon={item.icon}
+                  label={item.label}
+                  href={item.href}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
 
-      {/* Reduced space between Legal and Settings */}
-      <div className="mx-8 mt-3 mb-2.5 border-t border-gray-200" />
-
-      {/* Bottom */}
-      <div className="px-8 pb-4">
+      {/* Bottom Section - Always pinned to the bottom */}
+      <div className="px-6 pb-4 pt-2">
+        <div className="border-t border-gray-200 mb-3" />
         <div className="space-y-1">
           <NavItem icon={<Settings size={18} />} label="Settings" href="#" />
           <NavItem icon={<LogOut size={18} />} label="Log out" href="#" />
@@ -150,7 +146,7 @@ function NavItem({
   href?: string;
 }) {
   const content = (
-    <div className="flex items-center gap-3 text-[#436E58] py-2 cursor-pointer hover:bg-[#e8ede9] rounded-lg px-2 transition-colors">
+    <div className="flex items-center gap-3 text-[#436E58] py-1.5 px-2.5 rounded-lg cursor-pointer hover:bg-[#e8ede9] transition-colors text-[14px] font-medium">
       {icon}
       <span>{label}</span>
     </div>
@@ -176,10 +172,10 @@ function ActiveNavItem({
   href?: string;
 }) {
   const content = (
-    <div className="relative flex items-center gap-3 bg-[#739472] text-white py-3 px-4 rounded-xl shadow-lg">
-      <div className="absolute left-0 top-2 bottom-2 w-1 bg-[#2F6B4F] rounded-r" />
-      <div className="ml-2">{icon}</div>
-      <span className="font-medium">{label}</span>
+    <div className="relative flex items-center gap-3 bg-[#739472] text-white py-2.5 px-3.5 rounded-xl shadow-md">
+      <div className="absolute left-0 top-2 bottom-2 w-1.5 bg-[#245d45] rounded-r" />
+      <div className="ml-1">{icon}</div>
+      <span className="font-semibold text-[14px]">{label}</span>
     </div>
   );
 
