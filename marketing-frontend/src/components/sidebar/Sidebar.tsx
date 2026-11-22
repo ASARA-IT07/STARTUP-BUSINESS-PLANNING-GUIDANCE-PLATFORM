@@ -177,9 +177,9 @@ function ActiveNavItem({
   href?: string;
 }) {
   const content = (
-    <div className="relative flex items-center gap-3 bg-[#739472] text-white py-2.5 px-3.5 rounded-xl shadow-md">
-      <div className="absolute left-0 top-2 bottom-2 w-1.5 bg-[#245d45] rounded-r" />
-      <div className="ml-1">{icon}</div>
+    <div className="relative flex items-center gap-3 bg-[#739472] text-white py-3 px-4 rounded-xl shadow-lg overflow-hidden">
+      <div className="absolute left-0 top-2 bottom-2 w-1 bg-[#2F6B4F]" />
+      <div className="ml-2">{icon}</div>
       <span className="font-semibold text-[14px]">{label}</span>
     </div>
   );
