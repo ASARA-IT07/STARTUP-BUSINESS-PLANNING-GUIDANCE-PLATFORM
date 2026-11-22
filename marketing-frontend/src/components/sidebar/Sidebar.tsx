@@ -69,7 +69,7 @@ export default function Sidebar({ activeItem }: SidebarProps) {
       {/* Top Section */}
       <div className="flex flex-col">
         {/* Logo */}
-        <div className="pt-7 pb-5">
+        <div className="pt-8 pb-8">
           <Link href="/">
             <h1 className="text-center text-[30px] font-bold text-[#2F6B4F]">
               Nova
@@ -78,7 +78,7 @@ export default function Sidebar({ activeItem }: SidebarProps) {
         </div>
 
         {/* Current Business */}
-        <div className="px-6 mb-4">
+        <div className="px-6">
           <p className="text-[11px] uppercase font-semibold tracking-wide text-gray-500 mb-4">
             Current Business
           </p>
@@ -97,8 +97,8 @@ export default function Sidebar({ activeItem }: SidebarProps) {
           </div>
         </div>
 
-        {/* Divider above Workspace matching original */}
-        <div className="mx-8 mb-4 border-t border-gray-200" />
+        {/* Divider above Workspace - matches financial branch exactly */}
+        <div className="mx-8 my-4 border-t border-gray-200" />
 
         {/* Workspace */}
         <div className="px-8">
