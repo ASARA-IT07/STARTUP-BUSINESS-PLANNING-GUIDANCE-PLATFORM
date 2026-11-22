@@ -5,6 +5,7 @@ import { User } from "lucide-react";
 
 type TopNavbarProps = {
   title?: string;
+  subtitle?: string;
   hasUnreadNotifications?: boolean;
   searchPlaceholder?: string;
   onSearch?: (query: string) => void;
@@ -15,6 +16,7 @@ type TopNavbarProps = {
 
 export default function TopNavbar({
   title = "Marketing Planning",
+  subtitle,
   hasUnreadNotifications = false,
   searchPlaceholder = "Search",
   onSearch,
@@ -33,9 +35,16 @@ export default function TopNavbar({
     <header
       className={`flex h-[88px] w-full shrink-0 items-center justify-between border-b-2 border-[#c3cfbf] bg-white px-8 shadow-[0_2px_6px_rgba(47,93,80,0.08)] ${className}`}
     >
-      <h1 className="text-xl font-bold tracking-tight text-[#2a6355]">
-        {title}
-      </h1>
+      <div>
+        <h1 className="text-xl font-bold tracking-tight text-[#2a6355] leading-tight">
+          {title}
+        </h1>
+        {subtitle && (
+          <p className="text-[13px] text-[#5f7a6d] mt-0.5 leading-normal">
+            {subtitle}
+          </p>
+        )}
+      </div>
 
       <div className="flex items-center gap-4">
         <form

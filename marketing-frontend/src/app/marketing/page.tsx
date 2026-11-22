@@ -136,24 +136,17 @@ export default function MarketingPage() {
 
       {/* Main Content Area */}
       <div className="flex-1 h-screen overflow-hidden flex flex-col min-w-0">
-        {/* Top Navbar matching latest frontend components */}
-        <TopNavbar title="Marketing Planning" />
+        {/* Top Navbar with Title and Slogan */}
+        <TopNavbar
+          title="Marketing Planning"
+          subtitle="Shape your goals, audience and marketing channels."
+        />
 
         {/* Workspace Body: Center (Scrollable Form) & Right (Fixed Sidebar) */}
         <div className="flex-1 flex overflow-hidden">
           {/* Center Column: Form & Recommendations (Scrollable, scrollbar hidden) */}
           <main className="flex-1 overflow-y-auto no-scrollbar [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden p-8 space-y-6">
             <div className="max-w-[760px] mx-auto space-y-6">
-              {/* Page Headline & Subtitle */}
-              <div>
-                <h2 className="text-[26px] font-bold text-[#1f4d36] tracking-tight">
-                  Marketing Planning
-                </h2>
-                <p className="mt-1 text-[13px] text-gray-600">
-                  Shape your goals, audience and marketing channels.
-                </p>
-              </div>
-
               {/* Overview: Business Type Context */}
               <BusinessTypeBanner />
 
