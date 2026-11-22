@@ -69,35 +69,40 @@ export default function Sidebar({ activeItem }: SidebarProps) {
       {/* Top Section */}
       <div className="flex flex-col">
         {/* Logo */}
-        <div className="pt-6 pb-4">
+        <div className="pt-7 pb-5">
           <Link href="/">
-            <h1 className="text-center text-[28px] font-bold text-[#2F6B4F] tracking-tight">
+            <h1 className="text-center text-[30px] font-bold text-[#2F6B4F]">
               Nova
             </h1>
           </Link>
         </div>
 
         {/* Current Business */}
-        <div className="px-6 mb-4">
-          <p className="text-[11px] uppercase font-semibold tracking-wide text-gray-500 mb-2">
+        <div className="px-6">
+          <p className="text-[11px] uppercase font-semibold tracking-wide text-gray-500 mb-4">
             Current Business
           </p>
 
-          <div className="bg-[#739472] rounded-xl px-3.5 py-2 shadow-md">
-            <div>
-              <p className="font-semibold text-white text-[14px] leading-tight">
-                Willow &amp; Co.
-              </p>
-              <p className="text-[12px] text-green-100 leading-tight mt-0.5">
-                Business profile
-              </p>
+          <div className="bg-[#739472] rounded-xl px-3 py-1.5 shadow-lg">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="font-semibold text-white">
+                  Willow &amp; Co.
+                </p>
+                <p className="text-sm text-green-100">
+                  Business profile
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
+        {/* Divider above Workspace matching original */}
+        <div className="mx-8 my-4 border-t border-gray-200" />
+
         {/* Workspace */}
-        <div className="px-6">
-          <h2 className="text-gray-500 font-bold text-sm tracking-wider uppercase mb-2">
+        <div className="px-8">
+          <h2 className="text-gray-500 font-bold text-xl mb-2">
             WORKSPACE
           </h2>
 
@@ -125,7 +130,7 @@ export default function Sidebar({ activeItem }: SidebarProps) {
       </div>
 
       {/* Bottom Section - Always pinned to the bottom */}
-      <div className="px-6 pb-4 pt-2">
+      <div className="px-8 pb-5 pt-2">
         <div className="border-t border-gray-200 mb-3" />
         <div className="space-y-1">
           <NavItem icon={<Settings size={18} />} label="Settings" href="#" />
