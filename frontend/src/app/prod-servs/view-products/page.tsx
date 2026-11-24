@@ -47,7 +47,7 @@ export default function ProductsAndServicesPage() {
             <header className="flex items-start justify-between">
               <div>
                 <h1 className="text-[26px] font-bold text-[#1f4d36]">
-                  Products & Services
+                  Products 
                 </h1>
                 <p className="mt-1 text-[12px] text-gray-600">
                   Manage your products and services in one place.
@@ -76,7 +76,7 @@ export default function ProductsAndServicesPage() {
               <span className="text-[10px] text-gray-600">Your catalog, organized.</span>
             </div>
 
-            {/* Stat cards */}
+            {/* Stat cards for each product*/}
             <section className="mt-5 grid grid-cols-3 gap-3">
               <div className="relative rounded-xl border border-gray-200 bg-white p-4">
                 <p className="text-[11px] text-gray-700">Total Products</p>
@@ -156,7 +156,7 @@ export default function ProductsAndServicesPage() {
                       <td className="px-4 py-4 font-bold text-gray-900">{p.name}</td>
                       <td className="px-4 py-4 text-gray-700">{p.category}</td>
                       <td className="px-4 py-4 text-gray-700">LKR {p.price}</td>
-                      <td className={`px-4 py-4 ${stockColor(p.stock)}`}>{p.stock} units</td>
+                      <td className={`px-4 py-4 ${stockColor(p.material)}`}>{p.material} units</td>
                       <td className="px-4 py-4">
                         <span
                           className={`rounded-full px-3 py-1 text-[9px] font-medium ${statusColors[p.status]}`}
@@ -178,7 +178,7 @@ export default function ProductsAndServicesPage() {
 
               {/* Footer */}
               <div className="flex items-center justify-between px-5 py-4 text-[9px] text-gray-600">
-                <span>Showing 1–4 of 12 products</span>
+                <span>Showing 1–4 of 12 products</span> //12 should change with the number of products
                 <span>Sample product list</span>
               </div>
             </section>
